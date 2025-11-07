@@ -31,7 +31,7 @@ Through the correct choice of parameters, it is possible to obtain predictions s
    
 2. Install dependencies:
       ```bash
-   pip install simpy numpy matplotlib  pytorch scipy 
+   pip install simpy numpy matplotlib pytorch scipy 
    ```
       
 3. Start the program:
