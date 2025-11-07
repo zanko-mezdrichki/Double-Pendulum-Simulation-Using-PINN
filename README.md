@@ -1,44 +1,62 @@
-## 🤖 Double Pendulum Simulation Using PINN  
-Machine-learning model for predicting the chaotic motion of a double pendulum
+# 🤖 Double Pendulum Simulation Using PINN
 
-## 🚀 Overview  
-This project implements a physics-informed neural network (PINN) to predict and simulate the chaotic dynamics of a double pendulum.  
-It comprises three main components:  
-1. Data generation via a classical physics-based simulation of the double pendulum system.  
-2. Training of a neural network (PINN) to learn the underlying dynamics and predict trajectories.  
-3. Interactive visualisations of predicted vs. ground-truth trajectories, enabling analysis and validation of the model’s performance.
+A machine-learning model, built with Physics-Informed Neural Networks (PINN), to predict the chaotic motion of a double pendulum.
 
-Through the correct choice of parameters, it is possible to obtain predictions similar to reality.
+## ✨ Features
 
-## 🧠 Key Features  
-- **Physics-based data generation**: A full simulation of the double-pendulum system under various initial conditions, generating time-series trajectories and states.  
-- **PINN (Physics-Informed Neural Network)**: The ML model incorporates physics constraints (e.g., underlying differential equations of motion) to improve generalisation and physical consistency.  
-- **Prediction of chaotic motion**: The trained model aims to accurately predict highly non-linear and chaotic trajectories of the double pendulum beyond mere interpolation.  
-- **Visual analytic tools**: Interactive plots and animations comparing model predictions and ground truth trajectories, allowing in-depth qualitative and quantitative evaluation.
+* **Physics-based Data Generation:** A classical solver generates ground-truth time-series trajectories for various initial conditions.
+* **PINN Model:** The neural network incorporates physics constraints directly into the loss function, using the system's governing differential equations.
+* **Chaotic Motion Prediction:** The trained model aims to accurately predict the highly non-linear and chaotic trajectories
+* **Visual Analytic Tools:** Plots and animations to compare model predictions against the ground-truth trajectories for in-depth evaluation.
+* **Configurable Parameters:** Allows experimentation with initial conditions and physical properties to test the model's robustness.
 
-## ⚙️ Prerequisites  
-- Python 3.x  
-- libraries:  `simpy`, `numpy`, `matplotlib`,  `pytorch`  `scipy`  
-- Optional: GPU (for faster training)  
+## 🚀 Installation & Usage
 
-## Usage  
-
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git
-   cd Double-Pendulum-Simulation-Using-PINN
-   ```
-   
-2. Install dependencies:
-      ```bash
-   pip install simpy numpy matplotlib pytorch scipy 
-   ```
-      
-3. Start the program:
+1.  **Clone the repository:**
     ```bash
-   python main.py
-   ```
-    
-4. Enter the configuration values.
+    git clone [https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git](https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git)
+    cd Double-Pendulum-Simulation-Using-PINN
+    ```
 
+2.  **Install dependencies:**
+    ```bash
+    pip install simpy numpy matplotlib pytorch scipy
+    ```
+    *(Note: A GPU is highly recommended for faster training)*
 
+3.  **Start the program:**
+    ```bash
+    python main.py
+    ```
+4.  Enter the configuration values when prompted.
+
+## ⚙️ Parameters & Configuration
+
+On startup, `main.py` will prompt you to configure the simulation and model. This is key for experimenting with the system's chaotic nature.
+
+- **Initial Conditions:** $\theta_1$, $\dot{\theta}_1$, $\theta_2$, $\dot{\theta}_2$
+- **Physical Properties:** $m_1$, $m_2$, $L_1$, $L_2$, $g$
+- **Model Hyperparameters:** Time of the simmulation, number of time points considered, learning rate, epochs.
+
+## 🕹️ Preview
+
+For more details and results, see double_pendulum.pdf(highly recommended).
+
+In the preview folder there are images showing the training history and the comparison between angles calculated with the two methods with default parameters.
+
+To see the default animation: [https://youtu.be/9tKttP7lyuA](https://youtu.be/9tKttP7lyuA)
+
+## 📈 Future Improvements
+
+- PyQt5 interface for configuration.
+- Implementation of adaptive loss weighting(e.g. GradNorm) for better training balance.
+- Testing other architectures such as SIREN or Fourier-feature networks.
+
+## 🛠️ Technologies Used
+
+- Python 3.x
+- PyTorch 
+- SimPy 
+- NumPy
+- Matplotlib 
+- SciPy
