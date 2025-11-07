@@ -4,11 +4,11 @@ A machine-learning model, built with Physics-Informed Neural Networks (PINN), to
 
 ## ✨ Features
 
-* **Physics-based Data Generation:** A classical solver generates ground-truth time-series trajectories for various initial conditions.
+* **Physics-based Data Generation:** SciPy's odeint function generates ground-truth time-series trajectories for various initial conditions.
 * **PINN Model:** The neural network incorporates physics constraints directly into the loss function, using the system's governing differential equations.
-* **Chaotic Motion Prediction:** The trained model aims to accurately predict the highly non-linear and chaotic trajectories
+* **Chaotic Motion Prediction:** The trained model aims to accurately predict the highly non-linear and chaotic trajectories.
 * **Visual Analytic Tools:** Plots and animations to compare model predictions against the ground-truth trajectories for in-depth evaluation.
-* **Configurable Parameters:** Allows experimentation with initial conditions and physical properties to test the model's robustness.
+* **Configurable Parameters:** Allows experimentation with initial conditions and PINN properties.
 
 ## 🚀 Installation & Usage
 
