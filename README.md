@@ -6,7 +6,7 @@ The result is compared with solutions calculated using the **odeint** function f
 
 # Features
 
-* **Physics-based Data Generation:** SciPy's odeint function generates ground-truth time-series trajectories for various initial conditions.
+* **Physics-based Data Generation:** SciPy's odeint function generates trajectories for various initial conditions.
 * **PINN Model:** PINN incorporates the Euler-Lagrange equations directly into the loss function.
 * **Chaotic Motion Prediction:** The trained model aims to accurately predict the highly non-linear and chaotic trajectories.
 * **Visual Analytic Tools:** Plots and animations to compare model predictions against the ground-truth trajectories.
@@ -56,11 +56,11 @@ To see the animation with default parameters: [https://youtu.be/9tKttP7lyuA](htt
 # Technologies Used
 
 - Python 3.12.11
-- PyTorch 
-- SimPy 
-- NumPy
-- Matplotlib 
-- SciPy
+- PyTorch - for PINN
+- SimPy - for symbolic equations
+- NumPy - for data management
+- Matplotlib - for charts and animations
+- SciPy - for the evaluation
 
 # License
 This project is licensed under the [MIT License](./LICENSE). See the LICENSE file for more details.
