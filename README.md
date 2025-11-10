@@ -18,7 +18,7 @@ The result is compared with solutions calculated using the **odeint** function f
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git](https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git)
+    git clone https://github.com/zanko-mezdrichki/Double-Pendulum-Simulation-Using-PINN.git
     cd Double-Pendulum-Simulation-Using-PINN
     ```
 
